@@ -1,0 +1,11 @@
+# Archivos y carpetas generados automáticamente por Unity (NO subir)
+Library/
+Temp/
+Logs/
+Obj/
+UserSettings/
+.vscode/
+.vsconfig
+*.csproj
+*.sln
+*.user
