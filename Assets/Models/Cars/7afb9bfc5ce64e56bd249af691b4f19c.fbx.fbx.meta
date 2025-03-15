@@ -3,7 +3,17 @@ guid: f429f6837c2070949b9afe1d75565b1d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Porsche356
+    second: {fileID: 2100000, guid: 0a6d25365354c204e952c8574bfdd223, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass
+    second: {fileID: 2100000, guid: fd9370f06f7a1e447bd9bbe5215cb508, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
