@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
+    public bool isTesting = false;
+
     public enum Axel
     {
         Front,
@@ -33,8 +35,8 @@ public class CarController : MonoBehaviour
 
     public List<Wheel> wheels;
 
-    float moveInput;
-    float steerInput;
+    public float moveInput;
+    public float steerInput;
 
     private Rigidbody carRb;
 
@@ -61,11 +63,19 @@ public class CarController : MonoBehaviour
 
     void GetInputs()
     {
+        /*
             moveInput = Input.GetAxis("Vertical");
             steerInput = Input.GetAxis("Horizontal");
+        
+        */
+        if (!isTesting) // Solo usa el input real si no estamos en pruebas
+        {
+            moveInput = Input.GetAxis("Vertical");
+            steerInput = Input.GetAxis("Horizontal");
+        }
     }
 
-    void Move()
+    public void Move()
     {
         foreach (var wheel in wheels)
         {
@@ -73,7 +83,7 @@ public class CarController : MonoBehaviour
         }
     }
 
-    void Steer()
+    public void Steer()
     {
         foreach (var wheel in wheels)
         {
@@ -85,7 +95,7 @@ public class CarController : MonoBehaviour
         }
     }
 
-    void Brake()
+    public void Brake()
     {
         if (Input.GetKey(KeyCode.Space) || moveInput == 0)
         {
