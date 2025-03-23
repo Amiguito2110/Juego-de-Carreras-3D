@@ -3,7 +3,47 @@ guid: c199db6af5e1d594cb1cc26be44388e9
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: body black
+    second: {fileID: 2100000, guid: dc122d9124bbc7f418f304da25c153fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: body light yellow
+    second: {fileID: 2100000, guid: 7e3c40ed2d37f004f996afb83cd48ce6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: body white
+    second: {fileID: 2100000, guid: d085edbf7c105df48903753395ae0201, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: headlights
+    second: {fileID: 2100000, guid: 157183de2c8b5dd47b0d157f55a1300a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rear lights
+    second: {fileID: 2100000, guid: 76dde29ff981dd740a34e37fe52c4f62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tires
+    second: {fileID: 2100000, guid: 37267763d7dbf6d48a77708586a8c541, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wheels
+    second: {fileID: 2100000, guid: 9495c27fa684c4e449ee67399f501644, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: windows
+    second: {fileID: 2100000, guid: 4c23fe55faf3afb4e81ac8140a64e933, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
