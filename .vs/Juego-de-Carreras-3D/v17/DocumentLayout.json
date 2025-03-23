@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\aceve\\Desktop\\GitHub\\carreras3D\\Juego-de-Carreras-3D\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3BC2EADC-CFBC-278D-5FDD-0DCED29F59E3}|GameAssembly.csproj|c:\\users\\aceve\\desktop\\github\\carreras3d\\juego-de-carreras-3d\\assets\\scripts\\checkpointmeta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3BC2EADC-CFBC-278D-5FDD-0DCED29F59E3}|GameAssembly.csproj|c:\\users\\aceve\\desktop\\github\\carreras3d\\juego-de-carreras-3d\\assets\\scripts\\lapcounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BC2EADC-CFBC-278D-5FDD-0DCED29F59E3}|GameAssembly.csproj|solutionrelative:assets\\scripts\\lapcounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BC2EADC-CFBC-278D-5FDD-0DCED29F59E3}|GameAssembly.csproj|C:\\Users\\aceve\\Desktop\\GitHub\\carreras3D\\Juego-de-Carreras-3D\\assets\\scripts\\checkpointmeta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BC2EADC-CFBC-278D-5FDD-0DCED29F59E3}|GameAssembly.csproj|solutionrelative:assets\\scripts\\checkpointmeta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BC2EADC-CFBC-278D-5FDD-0DCED29F59E3}|GameAssembly.csproj|c:\\users\\aceve\\desktop\\github\\carreras3d\\juego-de-carreras-3d\\assets\\scripts\\carspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3BC2EADC-CFBC-278D-5FDD-0DCED29F59E3}|GameAssembly.csproj|C:\\Users\\aceve\\Desktop\\GitHub\\carreras3D\\Juego-de-Carreras-3D\\assets\\scripts\\carspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BC2EADC-CFBC-278D-5FDD-0DCED29F59E3}|GameAssembly.csproj|solutionrelative:assets\\scripts\\carspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -35,19 +39,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CheckpointMeta.cs",
-              "DocumentMoniker": "C:\\Users\\aceve\\Desktop\\GitHub\\carreras3D\\Juego-de-Carreras-3D\\Assets\\Scripts\\CheckpointMeta.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CheckpointMeta.cs",
-              "ToolTip": "C:\\Users\\aceve\\Desktop\\GitHub\\carreras3D\\Juego-de-Carreras-3D\\Assets\\Scripts\\CheckpointMeta.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CheckpointMeta.cs",
-              "ViewState": "AgIAAAAAAAAAasU/2QgZwA0AAAAAAAAAAAAAAA==",
+              "Title": "LapCounter.cs",
+              "DocumentMoniker": "C:\\Users\\aceve\\Desktop\\GitHub\\carreras3D\\Juego-de-Carreras-3D\\Assets\\Scripts\\LapCounter.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LapCounter.cs",
+              "ToolTip": "C:\\Users\\aceve\\Desktop\\GitHub\\carreras3D\\Juego-de-Carreras-3D\\Assets\\Scripts\\LapCounter.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LapCounter.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T00:23:02.495Z",
+              "WhenOpened": "2025-03-23T04:07:14.825Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "CheckpointMeta.cs",
+              "DocumentMoniker": "C:\\Users\\aceve\\Desktop\\GitHub\\carreras3D\\Juego-de-Carreras-3D\\Assets\\Scripts\\CheckpointMeta.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CheckpointMeta.cs",
+              "ToolTip": "C:\\Users\\aceve\\Desktop\\GitHub\\carreras3D\\Juego-de-Carreras-3D\\Assets\\Scripts\\CheckpointMeta.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CheckpointMeta.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T00:23:02.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "CarSpawner.cs",
               "DocumentMoniker": "C:\\Users\\aceve\\Desktop\\GitHub\\carreras3D\\Juego-de-Carreras-3D\\Assets\\Scripts\\CarSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CarSpawner.cs",
@@ -55,12 +71,11 @@
               "RelativeToolTip": "Assets\\Scripts\\CarSpawner.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T22:43:28.457Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T22:43:28.457Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "StartScreen.cs",
               "DocumentMoniker": "C:\\Users\\aceve\\Desktop\\GitHub\\carreras3D\\Juego-de-Carreras-3D\\Assets\\Scripts\\StartScreen.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\StartScreen.cs",
@@ -72,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CarController.cs",
               "DocumentMoniker": "C:\\Users\\aceve\\Desktop\\GitHub\\carreras3D\\Juego-de-Carreras-3D\\Assets\\Scripts\\CarController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CarController.cs",
