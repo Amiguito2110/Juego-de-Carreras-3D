@@ -5,6 +5,7 @@ Logs/
 Obj/
 UserSettings/
 .vscode/
+.vs/
 .vsconfig
 *.csproj
 *.sln
