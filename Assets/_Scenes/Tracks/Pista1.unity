@@ -450,7 +450,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6356301951012406771, guid: c45a1096cfb6bcb48a43c5cfab7e495b, type: 3}
       propertyPath: m_Mass
-      value: 100
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 6356301951012406771, guid: c45a1096cfb6bcb48a43c5cfab7e495b, type: 3}
+      propertyPath: m_AngularDrag
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6530383955226582444, guid: c45a1096cfb6bcb48a43c5cfab7e495b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -491,6 +495,18 @@ PrefabInstance:
     - target: {fileID: 6530383955226582444, guid: c45a1096cfb6bcb48a43c5cfab7e495b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6730018605651767294, guid: c45a1096cfb6bcb48a43c5cfab7e495b, type: 3}
+      propertyPath: maxAcceleration
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6730018605651767294, guid: c45a1096cfb6bcb48a43c5cfab7e495b, type: 3}
+      propertyPath: turnSensitivity
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6730018605651767294, guid: c45a1096cfb6bcb48a43c5cfab7e495b, type: 3}
+      propertyPath: brakeAcceleration
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 7017861716835312205, guid: c45a1096cfb6bcb48a43c5cfab7e495b, type: 3}
       propertyPath: m_Name
@@ -1125,7 +1141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1440248690
 BoxCollider:
   m_ObjectHideFlags: 0

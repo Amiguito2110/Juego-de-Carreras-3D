@@ -31,7 +31,7 @@ public class CarController : MonoBehaviour
     public float turnSensitivity = 1.0f;
     public float maxSteerAngle = 30.0f;
 
-    public Vector3 _centerOfMass;
+    public Vector3 _centerOfMass = new Vector3(0, -0.5f, 0);
 
     public List<Wheel> wheels;
 
@@ -45,7 +45,7 @@ public class CarController : MonoBehaviour
         carRb = GetComponent<Rigidbody>();
         carRb.centerOfMass = _centerOfMass;
 
-        
+
     }
 
     void Update()
@@ -77,9 +77,11 @@ public class CarController : MonoBehaviour
 
     public void Move()
     {
+        float torque = moveInput * maxAcceleration;
+
         foreach (var wheel in wheels)
         {
-            wheel.wheelCollider.motorTorque = moveInput * 600 * maxAcceleration * Time.deltaTime;
+            wheel.wheelCollider.motorTorque = torque;
         }
     }
 
@@ -89,29 +91,32 @@ public class CarController : MonoBehaviour
         {
             if (wheel.axel == Axel.Front)
             {
-                var _steerAngle = steerInput * turnSensitivity * maxSteerAngle;
-                wheel.wheelCollider.steerAngle = Mathf.Lerp(wheel.wheelCollider.steerAngle, _steerAngle, 0.6f);
+                float targetAngle = steerInput * turnSensitivity * maxSteerAngle;
+                wheel.wheelCollider.steerAngle = Mathf.Lerp(
+                    wheel.wheelCollider.steerAngle,
+                    targetAngle,
+                    0.6f // suaviza el giro
+                );
             }
         }
     }
 
     public void Brake()
     {
-        if (Input.GetKey(KeyCode.Space) || moveInput == 0)
-        {
-            foreach (var wheel in wheels)
-            {
-                wheel.wheelCollider.brakeTorque = 300 * brakeAcceleration * Time.deltaTime;
-            }
+        float brakeForce = 0f;
 
+        if (Input.GetKey(KeyCode.Space))
+        {
+            brakeForce = 1000f; // Frenado fuerte instantáneo
         }
-        else
+        else if (Mathf.Approximately(moveInput, 0))
         {
-            foreach (var wheel in wheels)
-            {
-                wheel.wheelCollider.brakeTorque = 0;
-            }
+            brakeForce = 500f; // Freno motor automático (leve)
+        }
 
+        foreach (var wheel in wheels)
+        {
+            wheel.wheelCollider.brakeTorque = brakeForce;
         }
     }
 

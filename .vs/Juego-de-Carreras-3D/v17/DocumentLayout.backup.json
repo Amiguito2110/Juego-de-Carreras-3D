@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\miska\\Unity\\Juego-de-Carreras-3D\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3BC2EADC-CFBC-278D-5FDD-0DCED29F59E3}|GameAssembly.csproj|C:\\Users\\miska\\Unity\\Juego-de-Carreras-3D\\assets\\scripts\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BC2EADC-CFBC-278D-5FDD-0DCED29F59E3}|GameAssembly.csproj|solutionrelative:assets\\scripts\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3BC2EADC-CFBC-278D-5FDD-0DCED29F59E3}|GameAssembly.csproj|C:\\Users\\miska\\Unity\\Juego-de-Carreras-3D\\assets\\scripts\\checkpointmeta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BC2EADC-CFBC-278D-5FDD-0DCED29F59E3}|GameAssembly.csproj|solutionrelative:assets\\scripts\\checkpointmeta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D52B6C5C-0FBE-2679-9E99-DA1D6A75C9ED}|Tests.csproj|c:\\users\\miska\\unity\\juego-de-carreras-3d\\assets\\tests\\carcontrollerut1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D52B6C5C-0FBE-2679-9E99-DA1D6A75C9ED}|Tests.csproj|solutionrelative:assets\\tests\\carcontrollerut1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3BC2EADC-CFBC-278D-5FDD-0DCED29F59E3}|GameAssembly.csproj|C:\\Users\\miska\\Unity\\Juego-de-Carreras-3D\\assets\\scripts\\carspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BC2EADC-CFBC-278D-5FDD-0DCED29F59E3}|GameAssembly.csproj|solutionrelative:assets\\scripts\\carspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BC2EADC-CFBC-278D-5FDD-0DCED29F59E3}|GameAssembly.csproj|C:\\Users\\miska\\Unity\\Juego-de-Carreras-3D\\assets\\scripts\\startscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BC2EADC-CFBC-278D-5FDD-0DCED29F59E3}|GameAssembly.csproj|solutionrelative:assets\\scripts\\startscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,28 +27,39 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CarController.cs",
-              "DocumentMoniker": "C:\\Users\\miska\\Unity\\Juego-de-Carreras-3D\\Assets\\Scripts\\CarController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CarController.cs",
-              "ToolTip": "C:\\Users\\miska\\Unity\\Juego-de-Carreras-3D\\Assets\\Scripts\\CarController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CarController.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAkwEoAAAAJAAAAAAAAAA==",
+              "Title": "CheckpointMeta.cs",
+              "DocumentMoniker": "C:\\Users\\miska\\Unity\\Juego-de-Carreras-3D\\Assets\\Scripts\\CheckpointMeta.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CheckpointMeta.cs",
+              "ToolTip": "C:\\Users\\miska\\Unity\\Juego-de-Carreras-3D\\Assets\\Scripts\\CheckpointMeta.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CheckpointMeta.cs",
+              "ViewState": "AgIAAAAAAAAAasU/2QgZwA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T19:22:13.733Z",
+              "WhenOpened": "2025-03-23T00:23:02.495Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CarControllerUT1.cs",
-              "DocumentMoniker": "C:\\Users\\miska\\Unity\\Juego-de-Carreras-3D\\Assets\\Tests\\CarControllerUT1.cs",
-              "RelativeDocumentMoniker": "Assets\\Tests\\CarControllerUT1.cs",
-              "ToolTip": "C:\\Users\\miska\\Unity\\Juego-de-Carreras-3D\\Assets\\Tests\\CarControllerUT1.cs",
-              "RelativeToolTip": "Assets\\Tests\\CarControllerUT1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "CarSpawner.cs",
+              "DocumentMoniker": "C:\\Users\\miska\\Unity\\Juego-de-Carreras-3D\\Assets\\Scripts\\CarSpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CarSpawner.cs",
+              "ToolTip": "C:\\Users\\miska\\Unity\\Juego-de-Carreras-3D\\Assets\\Scripts\\CarSpawner.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CarSpawner.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T18:38:19.344Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T22:43:28.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StartScreen.cs",
+              "DocumentMoniker": "C:\\Users\\miska\\Unity\\Juego-de-Carreras-3D\\Assets\\Scripts\\StartScreen.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\StartScreen.cs",
+              "ToolTip": "C:\\Users\\miska\\Unity\\Juego-de-Carreras-3D\\Assets\\Scripts\\StartScreen.cs",
+              "RelativeToolTip": "Assets\\Scripts\\StartScreen.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T22:25:21.488Z"
             }
           ]
         }
