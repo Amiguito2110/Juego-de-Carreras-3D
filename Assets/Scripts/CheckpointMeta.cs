@@ -2,12 +2,19 @@
 
 public class CheckpointMeta : MonoBehaviour
 {
+    private LapCounter lapCounter;
+
+    private void Start()
+    {
+        lapCounter = FindObjectOfType<LapCounter>(); // Busca automáticamente el script en escena
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             Debug.Log("¡El carro pasó por la meta!");
-            // Aquí después contaremos vueltas
+            lapCounter?.CrossedFinishLine(); // Llama al contador de vueltas
         }
     }
 }
