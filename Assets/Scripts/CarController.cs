@@ -23,16 +23,12 @@ public class CarController : MonoBehaviour
         public Axel axel;
     }
 
-    //public ControlMode control;
-
     public float maxAcceleration = 30.0f;
     public float brakeAcceleration = 50.0f;
-
     public float turnSensitivity = 1.0f;
     public float maxSteerAngle = 30.0f;
 
     public Vector3 _centerOfMass = new Vector3(0, -0.5f, 0);
-
     public List<Wheel> wheels;
 
     public float moveInput;
@@ -40,35 +36,42 @@ public class CarController : MonoBehaviour
 
     private Rigidbody carRb;
 
+    // Nueva variable para deshabilitar controles
+    public bool isRaceFinished = false;
+
     void Start()
     {
         carRb = GetComponent<Rigidbody>();
         carRb.centerOfMass = _centerOfMass;
-
-
     }
 
     void Update()
     {
-        GetInputs();
-        AnimateWheels();
+        if (!isRaceFinished)
+        {
+            GetInputs();
+            AnimateWheels();
+        }
     }
 
     void LateUpdate()
     {
-        Move();
-        Steer();
-        Brake();
+        if (!isRaceFinished)
+        {
+            Move();
+            Steer();
+            Brake();
+        }
+        else
+        {
+            // Frena el auto si ya terminó la carrera
+            ApplyFullBrake();
+        }
     }
 
     void GetInputs()
     {
-        /*
-            moveInput = Input.GetAxis("Vertical");
-            steerInput = Input.GetAxis("Horizontal");
-        
-        */
-        if (!isTesting) // Solo usa el input real si no estamos en pruebas
+        if (!isTesting)
         {
             moveInput = Input.GetAxis("Vertical");
             steerInput = Input.GetAxis("Horizontal");
@@ -95,7 +98,7 @@ public class CarController : MonoBehaviour
                 wheel.wheelCollider.steerAngle = Mathf.Lerp(
                     wheel.wheelCollider.steerAngle,
                     targetAngle,
-                    0.6f // suaviza el giro
+                    0.6f
                 );
             }
         }
@@ -107,16 +110,25 @@ public class CarController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space))
         {
-            brakeForce = 1000f; // Frenado fuerte instantáneo
+            brakeForce = 1000f;
         }
         else if (Mathf.Approximately(moveInput, 0))
         {
-            brakeForce = 500f; // Freno motor automático (leve)
+            brakeForce = 500f;
         }
 
         foreach (var wheel in wheels)
         {
             wheel.wheelCollider.brakeTorque = brakeForce;
+        }
+    }
+
+    void ApplyFullBrake()
+    {
+        foreach (var wheel in wheels)
+        {
+            wheel.wheelCollider.motorTorque = 0f;
+            wheel.wheelCollider.brakeTorque = 2000f;
         }
     }
 

@@ -1,22 +1,25 @@
 ﻿using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
 
 public class LapCounter : MonoBehaviour
 {
     public int totalLaps = 3;
-    private int currentLap = 1;
+    private int currentLap = 0;
     private bool firstCross = false;
     private bool raceStarted = false;
     private bool raceEnded = false;
 
     public Text lapText;
     public Text timerText;
+    public Text finishMessageText;
 
     private float elapsedTime = 0f;
 
     private void Start()
     {
         UpdateLapText();
+        if (finishMessageText != null)
+            finishMessageText.gameObject.SetActive(false); // Oculta el mensaje al inicio
     }
 
     private void Update()
@@ -38,11 +41,15 @@ public class LapCounter : MonoBehaviour
         else
         {
             currentLap++;
-            UpdateLapText();
 
-            if (currentLap >= totalLaps)
+            if (currentLap < totalLaps)
+            {
+                UpdateLapText(); // Solo actualiza si no es la última
+            }
+            else
             {
                 raceEnded = true;
+                UpdateLapText(); // Muestra Vuelta: 3/3
                 ShowFinalTime();
             }
         }
@@ -50,7 +57,7 @@ public class LapCounter : MonoBehaviour
 
     void UpdateLapText()
     {
-        lapText.text = "Vuelta: " + currentLap + "/" + totalLaps;
+        lapText.text = "Vuelta: " + Mathf.Min(currentLap + 1, totalLaps) + "/" + totalLaps;
     }
 
     void UpdateTimerText()
@@ -62,6 +69,16 @@ public class LapCounter : MonoBehaviour
 
     void ShowFinalTime()
     {
-        timerText.text += " - ¡Carrera terminada!";
+        if (finishMessageText != null)
+        {
+            finishMessageText.text = "¡Carrera terminada!";
+            finishMessageText.gameObject.SetActive(true);
+        }
+        // Detener el carro
+        CarController car = FindObjectOfType<CarController>();
+        if (car != null)
+        {
+            car.isRaceFinished = true;
+        }
     }
 }
