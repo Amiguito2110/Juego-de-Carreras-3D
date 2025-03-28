@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LapCounter : MonoBehaviour
 {
@@ -12,14 +13,19 @@ public class LapCounter : MonoBehaviour
     public Text lapText;
     public Text timerText;
     public Text finishMessageText;
+    public GameObject endGamePanel; // <- Panel con botones y mensaje final
 
     private float elapsedTime = 0f;
 
     private void Start()
     {
         UpdateLapText();
+
         if (finishMessageText != null)
-            finishMessageText.gameObject.SetActive(false); // Oculta el mensaje al inicio
+            finishMessageText.gameObject.SetActive(false);
+
+        if (endGamePanel != null)
+            endGamePanel.SetActive(false); // Ocultar al inicio
     }
 
     private void Update()
@@ -44,12 +50,12 @@ public class LapCounter : MonoBehaviour
 
             if (currentLap < totalLaps)
             {
-                UpdateLapText(); // Solo actualiza si no es la última
+                UpdateLapText();
             }
             else
             {
                 raceEnded = true;
-                UpdateLapText(); // Muestra Vuelta: 3/3
+                UpdateLapText();
                 ShowFinalTime();
             }
         }
@@ -74,11 +80,25 @@ public class LapCounter : MonoBehaviour
             finishMessageText.text = "¡Carrera terminada!";
             finishMessageText.gameObject.SetActive(true);
         }
-        // Detener el carro
+
+        if (endGamePanel != null)
+            endGamePanel.SetActive(true); // Mostrar panel de final
+
         CarController car = FindObjectOfType<CarController>();
         if (car != null)
         {
             car.isRaceFinished = true;
         }
+    }
+
+    // Botones de UI:
+    public void RestartRace()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
