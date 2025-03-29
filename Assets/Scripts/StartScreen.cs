@@ -4,17 +4,21 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class StartScreen : MonoBehaviour
 {
-    public void PlayTrack1() {
-        SceneManager.LoadScene("Pista1");
+    public void PlayTrack1()
+    {
+        GameData.pistaSeleccionada = 0; // o el ID que tú manejes
+        
     }
 
     public void PlayTrack2()
     {
-        SceneManager.LoadScene("Pista2");
+        GameData.pistaSeleccionada = 1;
+        
     }
 
     public void Quit()
-    {   Debug.Log("Saliendo del juego...");
+    {
+        Debug.Log("Saliendo del juego...");
         Application.Quit();
     }
 }

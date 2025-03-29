@@ -27,6 +27,7 @@ public class Intro : MonoBehaviour
         yield return StartCoroutine(Fade(0f, 1f));
 
         // Carga el menú
+        //
         SceneManager.LoadScene("MainMenu");
     }
 
