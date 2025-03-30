@@ -96,6 +96,9 @@ public class LapCounter : MonoBehaviour
         }
         SaveBestTime(elapsedTime);
         DisplayTopTimes();
+        Debug.Log("Panel activado");
+        Debug.Log("LapManager activo: " + gameObject.activeSelf);
+
     }
 
     void SaveBestTime(float newTime)
@@ -148,4 +151,10 @@ public class LapCounter : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void DebugClickTest()
+    {
+        Debug.Log("¡Se hizo clic en el botón!");
+    }
+
 }
