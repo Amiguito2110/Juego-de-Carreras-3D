@@ -6,12 +6,10 @@ public class FadeFromBlack : MonoBehaviour
 {
     public Image fadeImage;
     public float fadeDuration = 1f;
-
     void Start()
     {
         StartCoroutine(FadeIn());
     }
-
     IEnumerator FadeIn()
     {
         float time = 0f;
@@ -27,12 +25,10 @@ public class FadeFromBlack : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
-
         // Asegura opacidad final
         color.a = 0f;
         fadeImage.color = color;
-
-        // Desactiva el objeto para no interferir más
+        // Desactiva el objeto para no interferir con la escena cargada
         gameObject.SetActive(false);
     }
 }

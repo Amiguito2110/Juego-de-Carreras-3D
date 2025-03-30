@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Intro : MonoBehaviour
 {
-    public Image fadeImage;       // Arrastra el FadeImage aquí
+    public Image fadeImage;       //Imagen en negro para la transicion
     public float fadeDuration = 1f;
     public float waitTime = 2.5f;
 
@@ -17,18 +17,13 @@ public class Intro : MonoBehaviour
 
     IEnumerator PlaySplash()
     {
-        // Fade In (de negro a transparente)
-        yield return StartCoroutine(Fade(1f, 0f));
-
-        // Espera mostrando el logo
-        yield return new WaitForSeconds(waitTime);
-
-        // Fade Out (de transparente a negro)
-        yield return StartCoroutine(Fade(0f, 1f));
-
-        // Carga el menú
-        //
-        SceneManager.LoadScene("MainMenu");
+        yield return StartCoroutine(Fade(1f, 0f));  // Desvanece la Imagen negra para la transicion
+        
+        yield return new WaitForSeconds(waitTime);  // Muestra nuestro logo
+        
+        yield return StartCoroutine(Fade(0f, 1f)); // Vuelve a aparecer la imagen negra
+        
+        SceneManager.LoadScene("MainMenu"); // Cargamos la escena del Menu
     }
 
     IEnumerator Fade(float from, float to)
@@ -44,8 +39,6 @@ public class Intro : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
-
-        // Asegurar valor final
         color.a = to;
         fadeImage.color = color;
     }
