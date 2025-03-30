@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 
 public class LapCounter : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class LapCounter : MonoBehaviour
     public GameObject endGamePanel; // <- Panel con botones y mensaje final
 
     public Text topTimesText;
+    //Lista de mejores tiempos locales y la cantidad máxima a almacenar.
     private List<float> bestTimes = new List<float>();
     private const int maxRecords = 10;
 
@@ -33,6 +35,7 @@ public class LapCounter : MonoBehaviour
             endGamePanel.SetActive(false); // Ocultar al inicio
     }
 
+    //Mientras la carrera esté activa, va sumando tiempo y actualizando el cronómetro en pantalla.
     private void Update()
     {
         if (raceStarted && !raceEnded)
@@ -41,16 +44,17 @@ public class LapCounter : MonoBehaviour
             UpdateTimerText();
         }
     }
-
+    //Se ejecuta cada vez que el auto pasa por la meta
     public void CrossedFinishLine()
     {
+        //Si es la primera vez, inicia la carrera.
         if (!firstCross)
         {
             firstCross = true;
             raceStarted = true;
         }
         else
-        {
+        {   //Si ya está en carrera, suma una vuelta.
             currentLap++;
 
             if (currentLap < totalLaps)
@@ -59,6 +63,7 @@ public class LapCounter : MonoBehaviour
             }
             else
             {
+                //Si completa las vueltas, termina la carrera y lanza el panel final.
                 raceEnded = true;
                 UpdateLapText();
                 ShowFinalTime();
@@ -78,6 +83,7 @@ public class LapCounter : MonoBehaviour
         timerText.text = string.Format("{0:00}:{1:00.00}", minutes, seconds);
     }
 
+    //Muestra los elementos de fin de carrera y llama a funciones para guardar y mostrar los mejores tiempos.
     void ShowFinalTime()
     {
         if (finishMessageText != null)
@@ -101,6 +107,8 @@ public class LapCounter : MonoBehaviour
 
     }
 
+    // Carga anteriores tiempos de PlayerPrefs
+    // Añade el nuevo, ordena, y guarda los 10 mejores
     void SaveBestTime(float newTime)
     {
         // Cargar anteriores
@@ -126,6 +134,7 @@ public class LapCounter : MonoBehaviour
         PlayerPrefs.Save();
     }
 
+    // Muestra los mejores tiempos ordenados en un Text de la UI
     void DisplayTopTimes()
     {
         if (topTimesText == null) return;
@@ -144,11 +153,13 @@ public class LapCounter : MonoBehaviour
     // Botones de UI:
     public void RestartRace()
     {
+        //Reinicia la carrera cargando la escena actual.
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void ReturnToMainMenu()
     {
+        //Reegresa al Menu Principal
         SceneManager.LoadScene("MainMenu");
     }
 

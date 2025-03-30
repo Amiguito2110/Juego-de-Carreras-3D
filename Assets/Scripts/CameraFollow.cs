@@ -23,6 +23,9 @@ public class CameraFollow : MonoBehaviour
         HandleRotation();
     }
 
+
+    //Calcula la posición objetivo de la cámara en relación al auto usando un offset.
+    //Usa Lerp para mover suavemente la cámara hacia esa posición objetivo.
     void HandleMovement()
     {
         Vector3 targetPos = new Vector3();
@@ -33,12 +36,12 @@ public class CameraFollow : MonoBehaviour
 
     void HandleRotation()
     {
-        var direction = carTarget.position - transform.position;
-        var rotation = new Quaternion();
+        var direction = carTarget.position - transform.position; //Calcula la dirección hacia la que debe mirar la cámara (hacia el auto).
+        var rotation = new Quaternion(); //Usa LookRotation para generar una rotación orientada al auto con un pequeño ajuste (rotOffset).
 
         rotation = Quaternion.LookRotation(direction + rotOffset, Vector3.up);
 
-        transform.rotation = Quaternion.Lerp(transform.rotation, rotation, rotSmoothness * Time.deltaTime);
+        transform.rotation = Quaternion.Lerp(transform.rotation, rotation, rotSmoothness * Time.deltaTime); //Interpola la rotación actual con la deseada usando Lerp para una transición suave.
     }
 
 }
