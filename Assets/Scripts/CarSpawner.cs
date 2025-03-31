@@ -6,13 +6,13 @@ public class CarSpawner : MonoBehaviour
     public GameObject[] autosDisponibles;
 
     private void Start()
-    {   /*
+    {   
         //----------------------Para Pruebas--------------------
         // Si no se ha seleccionado un auto (por menú), lo forzamos por defecto (solo para pruebas).
         if (GameData.autoSeleccionado == -1)
         {
-            GameData.autoSeleccionado = 1; // Cambia por el índice del auto que quieres probar
-        }*/
+            GameData.autoSeleccionado = 0; // Cambia por el índice del auto que quieres probar
+        }
 
         //Desactiva todos los autos disponibles en la escena si estuvieran activados, para no causar inconvenientes y cargar 2 autos al mismo tiempo
         for (int i = 0; i < autosDisponibles.Length; i++)
